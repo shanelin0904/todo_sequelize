@@ -22,7 +22,7 @@ app.engine('hbs', exphbs({ defaultLayout: 'main', extname: '.hbs' }))
 app.set('view engine', 'hbs')
 
 app.use(session({
-  secret: 'ThisIsMySecret',
+  secret: 'process.env.SECRET',
   resave: false,
   saveUninitialized: true
 }))
